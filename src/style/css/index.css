@@ -185,58 +185,49 @@ a:focus {
   .dowload.app {
     display: block !important;
   }
-
-  .main .chat_div {
-    bottom: calc(env(safe-area-inset-bottom) + 70px) !important;
-  }
-
-  .chat .if_con {
-    height: calc((100vh - 130px) - env(safe-area-inset-bottom)) !important;
-  }
-
   .specific .img_save form {
     display: none !important;
   }
   .register_login {
-    bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   #footer {
-    bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    bottom: calc(env(safe-area-inset-bottom) + 5px) !important;
   }
   .form_alls {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 30px) !important;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .row_one {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 30px) !important;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .row_two {
     padding-bottom: env(safe-area-inset-bottom) !important;
   }
   .acaunt_block_modal {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .btn_button {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .all_shop {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .block_shop {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .guestions_block_all {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .get_details_block_all {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .special_block_all {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .my-information {
-    margin-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
   .order {
-    padding-bottom: calc(env(safe-area-inset-bottom) + 20px) !important;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 10px) !important;
   }
 }

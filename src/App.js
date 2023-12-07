@@ -105,14 +105,18 @@ const App = () => {
             });
     }, [])
 
-    const versionConst = "1.0.0"
+    const versionConst = "1.0.2"
 
     useEffect(() => {
-        if (version && version.version && String(versionConst).replaceAll('.', '') < String(version.version).replaceAll('.', '')) {
-            setUpDate(true)
+        if (
+          version &&
+          version.version &&
+          String(versionConst).replaceAll(".", "") <
+            String(version.version).replaceAll(".", "")
+        ) {
+          setUpDate(true);
         }
-    }, [version])
-
+      }, [version]);
     return (
         <>
 
