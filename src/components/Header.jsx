@@ -12,6 +12,7 @@ const Header = ({user}) => {
     const navigate = useNavigate()
     const [isOpens, setIsOpens] = useState(false);
     const token = localStorage.getItem('token') ? localStorage.getItem('token') : false;
+    console.log(user);
     return (
         <div>
             <div className="nav">

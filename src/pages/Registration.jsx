@@ -50,46 +50,46 @@ const Registration = ({ Alert }) => {
     localStorage.setItem("phone", userData.phone);
     if (userData) {
       dispatch(registerStart());
-      if (
-        userData.phone &&
-        userData.phone
-          .replaceAll("(", "")
-          .replaceAll(")", "")
-          .replaceAll("+", "")
-          .replaceAll("-", "")
-          .replaceAll(" ", "").length === 12
-      ) {
-        try {
-          const response = await axios.post(url + "/auth/register", userData);
-          dispatch(registerSuccess(response.data));
-          if (response.data.phone) {
-            Alert(response.data.phone, "error");
-          }
-          if (response.data.non_field_errors) {
-            Alert(response.data.non_field_errors, "error");
-          }
-          if (response.data.response == true) {
-            Alert(response.data.message, "success");
-            navigate("/personal/activation");
-          }
-          if (
-            response.data.password ||
-            response.data.confirm_password ||
-            response.data.phone
-          ) {
-            setError(response.data);
-            console.log(phone.length);
-          }
-          setIsLoading(false);
-        } catch (error) {
-          dispatch(registerFailure(error.message));
-          Alert("Text", "error");
-          setIsLoading(false);
+      // if (
+      //   userData.phone &&
+      //   userData.phone
+      //     .replaceAll("(", "")
+      //     .replaceAll(")", "")
+      //     .replaceAll("+", "")
+      //     .replaceAll("-", "")
+      //     .replaceAll(" ", "").length === 12
+      // ) {
+      try {
+        const response = await axios.post(url + "/auth/register", userData);
+        dispatch(registerSuccess(response.data));
+        if (response.data.phone) {
+          Alert(response.data.phone, "error");
         }
-      } else {
-        Alert("Введите номер телефона в", "error");
+        if (response.data.non_field_errors) {
+          Alert(response.data.non_field_errors, "error");
+        }
+        if (response.data.response == true) {
+          Alert(response.data.message, "success");
+          navigate("/personal/activation");
+        }
+        if (
+          response.data.password ||
+          response.data.confirm_password ||
+          response.data.phone
+        ) {
+          setError(response.data);
+          console.log(phone.length);
+        }
+        setIsLoading(false);
+      } catch (error) {
+        dispatch(registerFailure(error.message));
+        Alert("Text", "error");
         setIsLoading(false);
       }
+      // } else {
+      //   Alert("Введите номер телефона в", "error");
+      //   setIsLoading(false);
+      // }
     }
   };
 
@@ -180,6 +180,7 @@ const Registration = ({ Alert }) => {
                       />
                     )}
                   </InputMask>
+                  {/* {error.phone && <p className="red">{error.phone}</p>} */}
                 </div>
                 <div className="input_box">
                   <label>

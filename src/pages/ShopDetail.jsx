@@ -423,18 +423,20 @@ const ShopDetail = ({
                     />
                     <h6 className="title_one m-lg-2">По умолчение</h6>
                   </div>
-                  <div
-                    className="sort-wrap"
-                    onClick={handleSales || setFilter(false)}
-                  >
+                  <div className="sort-wrap" onClick={() => handleSales()}>
                     <input
-                      id="wp-comment-cookies-consent"
-                      name="wp-comment-cookies-consent"
+                      id="popular-checkbox"
+                      name="popular-sort"
                       type="checkbox"
                       value="yes"
                       onClick={() => setFilter(false)}
                     />
-                    <h6 className="title_one m-lg-2">Сначала популярные</h6>
+                    <label
+                      htmlFor="popular-checkbox"
+                      className="title_one m-lg-2"
+                    >
+                      Сначала популярные
+                    </label>
                   </div>
                   <div
                     className="sort-wrap"
@@ -447,7 +449,12 @@ const ShopDetail = ({
                       value="yes"
                       onClick={() => setFilter(false)}
                     />
-                    <h6 className="title_one m-lg-2">Сначала дешевые</h6>
+                    <label
+                      htmlFor="popular-checkbox"
+                      className="title_one m-lg-2"
+                    >
+                      Сначала дешевые
+                    </label>
                   </div>
                   <div
                     className="sort-wrap"
@@ -460,7 +467,12 @@ const ShopDetail = ({
                       value="yes"
                       onClick={() => setFilter(false)}
                     />
-                    <h6 className="title_one m-lg-2">Сначала дорогие</h6>
+                    <label
+                      htmlFor="popular-checkbox"
+                      className="title_one m-lg-2"
+                    >
+                      Сначала дорогие
+                    </label>
                   </div>
                   <div
                     className="sort-wrap"
@@ -473,7 +485,12 @@ const ShopDetail = ({
                       value="yes"
                       onClick={() => setFilter(false)}
                     />
-                    <h6 className="title_one m-lg-2">По алфавиту от А до Я</h6>
+                    <label
+                      htmlFor="popular-checkbox"
+                      className="title_one m-lg-2"
+                    >
+                      По алфавиту от А до Я
+                    </label>
                   </div>
                   <div
                     className="sort-wrap"
@@ -486,7 +503,12 @@ const ShopDetail = ({
                       value={el.title}
                       onClick={() => setFilter(false)}
                     />
-                    <h6 className="title_one m-lg-2">По алфавиту от Я до А</h6>
+                    <label
+                      htmlFor="popular-checkbox"
+                      className="title_one m-lg-2"
+                    >
+                      По алфавиту от Я до А
+                    </label>
                   </div>
                 </div>
               </div>

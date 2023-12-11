@@ -585,26 +585,21 @@ button {
   font-size: 14px;
   font-weight: 600;
 }
-
 .ai_out {
   font-size: 15px !important;
 }
-
 .nav_content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .navs_one {
   font-weight: 400;
   margin: 4px 0 0 0;
 }
-
 .qar {
   width: 100%;
 }
-
 .marks {
   width: 30px;
   height: 30px;
@@ -619,19 +614,15 @@ button {
   align-items: center;
   justify-content: center;
 }
-
 .marks .active {
   color: var(--orange);
 }
-
 .mt_one {
   margin: 4px 0 0 7px;
 }
-
 .bs {
   font-size: 18px;
 }
-
 .flex {
   display: flex;
   align-items: center;
@@ -1113,7 +1104,9 @@ select {
   font-weight: 400;
   margin-bottom: 15px;
 }
-
+.sort-wrap input {
+  cursor: pointer;
+}
 .title_one {
   font-size: 14px;
   color: #000;
@@ -1130,4 +1123,9 @@ select {
 
 .filters_oll .order .title_h3 {
   margin-bottom: 30px;
+}
+
+.inpuuuuuut {
+  display: flex;
+  gap: 10px;
 }
