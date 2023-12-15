@@ -18,6 +18,7 @@ const ToHelpPage = () => {
         <div className="nav">
           <div className="container d-flex justify-content-between align-items-center ">
             <HiArrowLongLeft
+            
               className="fi"
               style={{ cursor: "pointer" }}
               onClick={() => navigate(-1)}
