@@ -34,7 +34,7 @@ const Main = ({ user }) => {
               onClick={() => navigate("/qr-cod")}
             >
               <div>
-                <h4 className="title_h">Бонусная картаsdf,.gnsfkl</h4>
+                <h4 className="title_h">Бонусная карта</h4>
                 <h1 className="title_ha">
                   {user.bonus}
                   <span>{user.bonus === null ? "0" : user.bonus} бонусов</span>
