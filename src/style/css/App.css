@@ -1130,3 +1130,12 @@ select {
   display: flex;
   gap: 10px;
 }
+.old_price{
+  color: #515151 !important;
+  font-size: 12px !important;
+  text-align: center;
+  text-decoration: line-through;
+}
+.old_price_one{
+  font-size: 16px !important;
+}
