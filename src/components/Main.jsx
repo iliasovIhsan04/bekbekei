@@ -40,7 +40,9 @@ const Main = ({ user }) => {
                   <span>{user.bonus === null ? "0" : user.bonus} бонусов</span>
                 </h1>
               </div>
-              <img src={user.qrimg} alt="" />
+              <div className="bonus_img">
+                <img src={user.qrimg} alt="" />
+              </div>
             </div>
           </div>
         ) : (

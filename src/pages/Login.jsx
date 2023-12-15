@@ -16,27 +16,6 @@ import {
 import InputMask from "react-input-mask";
 
 const Login = ({ Alert }) => {
-  // const phoneInputRef = useRef(null);
-  // const staticCode = "+996";
-
-  // const handlePaste = (e) => {
-  //   e.preventDefault();
-  //   const clipboardData = e.clipboardData || window.clipboardData;
-  //   const pastedData = clipboardData.getData("text");
-  //   const modifiedData = `${staticCode}${pastedData}`;
-  //   document.execCommand("insertText", false, modifiedData);
-  // };
-
-  // useEffect(() => {
-  //   if (phoneInputRef.current) {
-  //     phoneInputRef.current.addEventListener("paste", handlePaste);
-  //   }
-
-  //   return () => {
-  //     if (phoneInputRef.current) {
-  //       phoneInputRef.current.removeEventListener("paste", handlePaste);
-  //     }
-  //   };
   // }, []);
 
   // useEffect(() => {
@@ -64,39 +43,29 @@ const Login = ({ Alert }) => {
       phone,
       password,
     };
-    if (
-      phone &&
-      phone
-        .replaceAll("(", "")
-        .replaceAll(")", "")
-        .replaceAll("+", "")
-        .replaceAll("-", "")
-        .replaceAll(" ", "").length === 12
-    ) {
-      try {
-        const response = await axios.post(url + "/auth/login", userCredential);
-        dispatch(registerSuccess(response.data));
-        if (response.data.response === true) {
-          navigate("/");
-          Alert(response.data.message, "success");
-        }
-        if (response.data.response === false) {
-          Alert(response.data.message, "error");
-        }
-        if (response.data.token) {
-          localStorage.setItem("token", JSON.stringify(response.data.token));
-          localStorage.setItem("tokens", response.data.token);
-        }
-        if (response.data.password) {
-          setError(response.data);
-        }
-        setIsLoading(false);
-      } catch (error) {
-        dispatch(registerFailure(error.message));
-        setIsLoading(false);
+    try {
+      const response = await axios.post(url + "/auth/login", userCredential);
+      dispatch(registerSuccess(response.data));
+      if (response.data.response === true) {
+        navigate("/");
+        Alert(response.data.message, "success");
       }
-    } else {
-      Alert("Введите номер телефона", "error");
+      if (response.data.response === false) {
+        Alert(response.data.message, "error");
+      }
+      if (response.data.token) {
+        localStorage.setItem("token", JSON.stringify(response.data.token));
+        localStorage.setItem("tokens", response.data.token);
+      }
+      if (response.data.password) {
+        setError(response.data);
+      }
+      if (response.data.phone) {
+        setError(response.data);
+      }
+      setIsLoading(false);
+    } catch (error) {
+      dispatch(registerFailure(error.message));
       setIsLoading(false);
     }
 

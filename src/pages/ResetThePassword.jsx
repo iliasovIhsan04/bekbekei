@@ -28,41 +28,41 @@ const ResetThePassword = ({ Alert }) => {
     let forgotCredential = {
       phone,
     };
-    if (
-      phone &&
-      phone
-        .replaceAll("(", "")
-        .replaceAll(")", "")
-        .replaceAll("+", "")
-        .replaceAll("-", "")
-        .replaceAll(" ", "").length === 12
-    ) {
-      try {
-        const response = await axios.post(
-          url + "/auth/reset-password",
-          forgotCredential
-        );
-        if (response.data.response === true) {
-          localStorage.setItem("phone", JSON.stringify(phone));
-          dispatch(registerSuccess(response.data));
-          navigate("/personal/activation-code");
-          Alert(response.data.message, "success");
-        } else {
-          Alert(response.data.message, "error");
-        }
-        if (response.data.phone) {
-          setErrorCode(response.data);
-        }
-      } catch (error) {
-        console.error(error);
-        dispatch(registerFailure(error.message));
-      } finally {
-        setIsLoading(false);
+    // if (
+    //   phone &&
+    //   phone
+    //     .replaceAll("(", "")
+    //     .replaceAll(")", "")
+    //     .replaceAll("+", "")
+    //     .replaceAll("-", "")
+    //     .replaceAll(" ", "").length === 12
+    // ) {
+    try {
+      const response = await axios.post(
+        url + "/auth/reset-password",
+        forgotCredential
+      );
+      if (response.data.response === true) {
+        localStorage.setItem("phone", JSON.stringify(phone));
+        dispatch(registerSuccess(response.data));
+        navigate("/personal/activation-code");
+        Alert(response.data.message, "success");
+      } else {
+        Alert(response.data.message, "error");
       }
-    } else {
-      Alert("Введите номер телефона", "error");
+      if (response.data.phone) {
+        setErrorCode(response.data);
+      }
+    } catch (error) {
+      console.error(error);
+      dispatch(registerFailure(error.message));
+    } finally {
       setIsLoading(false);
     }
+    // } else {
+    //   Alert("Введите номер телефона", "error");
+    //   setIsLoading(false);
+    // }
   };
 
   return (

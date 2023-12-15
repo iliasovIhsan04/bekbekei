@@ -50,15 +50,6 @@ const Registration = ({ Alert }) => {
     localStorage.setItem("phone", userData.phone);
     if (userData) {
       dispatch(registerStart());
-      // if (
-      //   userData.phone &&
-      //   userData.phone
-      //     .replaceAll("(", "")
-      //     .replaceAll(")", "")
-      //     .replaceAll("+", "")
-      //     .replaceAll("-", "")
-      //     .replaceAll(" ", "").length === 12
-      // ) {
       try {
         const response = await axios.post(url + "/auth/register", userData);
         dispatch(registerSuccess(response.data));
@@ -86,10 +77,6 @@ const Registration = ({ Alert }) => {
         Alert("Text", "error");
         setIsLoading(false);
       }
-      // } else {
-      //   Alert("Введите номер телефона в", "error");
-      //   setIsLoading(false);
-      // }
     }
   };
 

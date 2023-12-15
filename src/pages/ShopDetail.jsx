@@ -417,9 +417,9 @@ const ShopDetail = ({
                     <input
                       id="wp-comment-cookies-consent"
                       name="wp-comment-cookies-consent"
-                      onClick={() => setFilter(false)}
                       type="checkbox"
                       value="yes"
+                      onClick={() => setFilter(false)}
                     />
                     <h6 className="title_one m-lg-2">По умолчение</h6>
                   </div>

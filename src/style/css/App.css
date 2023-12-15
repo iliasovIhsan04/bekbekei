@@ -334,6 +334,7 @@ label span {
   font-weight: 400;
   border-radius: 15px !important;
   padding: 5px 10px;
+  white-space: nowrap;
 }
 
 .scroll {
@@ -498,8 +499,8 @@ button {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-height: 20px;
+  -webkit-line-clamp: 2;
+  line-height: 18px;
   max-height: 60px;
 }
 
