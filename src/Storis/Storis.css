@@ -37,7 +37,7 @@
   height: 70px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #ff640d;
+  border: 3px solid rgb(47, 255, 47);
 }
 
 .storis .storis_content img {

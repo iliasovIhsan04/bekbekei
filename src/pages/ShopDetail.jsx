@@ -356,11 +356,9 @@ const ShopDetail = ({
                     <div style={{ display: "flex", flexDirection: "column" }}>
                       <h2>{el.price} сом</h2>
                       <h2 className="old_price">
-                        {el.old_price} 
-                        {
-                          el.old_price === null ? "" :  "  сом"
-                        }
-                        </h2>
+                        {el.old_price}
+                        {el.old_price === null ? "" : "  сом"}
+                      </h2>
                     </div>
                   </div>
                 </div>
