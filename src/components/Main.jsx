@@ -10,7 +10,7 @@ import Storis from "../Storis/Storis";
 import GetShot from "./GetShot";
 import SwipeableBottomSheet from "react-swipeable-bottom-sheet";
 import classNames from "classnames";
-
+import logo from "../img/bekbekei-logotip.png"
 const Main = ({ user }) => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token")
@@ -33,6 +33,7 @@ const Main = ({ user }) => {
                 <div className="margin_top_all">
                   <div className="margin_top_log">
                     <DiVisualstudio className="dio" />
+                    <img src={logo} alt="" className="dio" />
                   </div>
                 </div>
                 <div
