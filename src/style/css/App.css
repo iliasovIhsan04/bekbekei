@@ -271,6 +271,7 @@ label span {
   grid-gap: 15px;
   grid-auto-flow: dense;
   margin-top: 80px;
+  margin-bottom: 100%;
 }
 
 .all_shop .shops {
