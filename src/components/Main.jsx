@@ -43,7 +43,7 @@ const Main = ({ user }) => {
                   <div>
                     <h4 className="title_h">Бонусная карта</h4>
                     <h1 className="title_ha">
-                      {user.bonus}
+                      {user.bonus} 
                       <span>бонусов</span>
                     </h1>
                   </div>
