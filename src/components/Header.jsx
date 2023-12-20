@@ -19,15 +19,23 @@ const Header = ({ user }) => {
     <div>
       <div className="nav navs_block">
         <div className="container nav_content">
-          <FiUser className="fi" color="#fff" onClick={() => navigate("/dashboard")} />
+          <FiUser
+            className="fi"
+            color="#fff"
+            onClick={() => navigate("/dashboard")}
+          />
           {token ? (
-            <h2 className="first_last_name_header" style={{color:"#fff"}}>
+            <h2 className="first_last_name_header" style={{ color: "#fff" }}>
               Привет, {user.first_name} {user.last_name}
             </h2>
           ) : (
             <img src={bekbekei} alt="" />
           )}
-          <BiBell className="fi" color="#fff" onClick={() => setIsOpens(true)} />
+          <BiBell
+            className="fi"
+            color="#fff"
+            onClick={() => setIsOpens(true)}
+          />
         </div>
       </div>
       {isOpens === true && (
