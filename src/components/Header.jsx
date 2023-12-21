@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 
 const Header = ({ user }) => {
   const navigate = useNavigate();
-  const [isOpens, setIsOpens] = useState(false);
   const token = localStorage.getItem("token")
     ? localStorage.getItem("token")
     : false;
@@ -34,24 +33,10 @@ const Header = ({ user }) => {
           <BiBell
             className="fi"
             color="#fff"
-            onClick={() => setIsOpens(true)}
+            onClick={() => navigate("/notification")}
           />
         </div>
       </div>
-      {isOpens === true && (
-        <div id="modal">
-          <div className="nav">
-            <div className="container d-flex justify-content-between align-items-center">
-              <HiArrowLongLeft
-                className="fi"
-                onClick={() => setIsOpens(false)}
-              />
-              <h4 className="title_h5 all_title">Уведомление</h4>
-              <div />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

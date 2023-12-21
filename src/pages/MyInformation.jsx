@@ -102,7 +102,7 @@ const dataSelect = {
       city: "Белеводское",
     },
     {
-      city: "Ощ",
+      city: "Ош",
     },
     {
       city: "Каракол",

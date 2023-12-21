@@ -1008,11 +1008,11 @@ input#file-upload-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px;
 }
 .ionic_button {
   border: none;
   background: var(--orange);
+  margin-bottom: 20px;
 }
 .ionic_button_text {
   font-size: 18px;
@@ -1230,4 +1230,65 @@ input#file-upload-button {
   background: #fff;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+}
+.notificatios_block {
+  width: 100%;
+  padding-top: 60px;
+}
+.notifications_box {
+  width: 100%;
+  min-height: 90px;
+  background-color: #ff640db8;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+}
+.notification_index {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.notify {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.megap_icons {
+  color: var(--orange);
+}
+.megap_title {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-left: 20px;
+  width: 180px;
+  min-height: 10px;
+}
+.magap_date {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.281);
+  margin-left: auto;
+  display: flex;
+  justify-content: end;
+}
+.noti_details_block {
+  width: 100%;
+  padding-top: 60px;
+}
+.noti_img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px !important;
+
+}
+.noti_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
 }

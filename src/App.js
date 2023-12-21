@@ -26,6 +26,9 @@ import { FaGooglePlay } from "react-icons/fa";
 import { FaCloudArrowDown } from "react-icons/fa6";
 import axios from "axios";
 import { url } from "./Api";
+import Notifications from "./pages/Notifications";
+import MyOrders from "./pages/MyOrders";
+import NotificationsDetail from "./pages/NotificationsDetail";
 
 const App = () => {
   const [openAlert, setOpenAlert] = useState({
@@ -105,7 +108,6 @@ const App = () => {
   }, []);
 
   const versionConst = "1.0.3";
-
   useEffect(() => {
     if (
       version &&
@@ -180,6 +182,12 @@ const App = () => {
               <Route path="shop-all/*" element={<Project />} />
               <Route path="/qr-cod" element={<QrCode />} />
               <Route path="/application" element={<AboutApplication />} />
+              <Route path="/notification" element={<Notifications />} />
+              <Route path="/my-orders" element={<MyOrders />} />
+              <Route
+                path="/notifications-detalis/:id"
+                element={<NotificationsDetail />}
+              />
               <Route
                 path="/my-information"
                 element={<MyInformation Alert={FuncAlert} />}
