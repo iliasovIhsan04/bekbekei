@@ -27,7 +27,7 @@ const NotificationsDetail = () => {
         <div className="nav">
           <div className="container d-flex justify-content-between align-items-center">
             <div></div>
-            <h4 className="title_h5 all_title">{notifyDetail.title}</h4>
+            <h4 className="noti_title_detail">{notifyDetail.title}</h4>
             <RiCloseLine className="fi" onClick={() => navigate(-1)} />
           </div>
         </div>

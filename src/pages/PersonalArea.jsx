@@ -67,11 +67,10 @@ const PersonalArea = () => {
           <div className="top_one one">
             <div
               className="area_all"
-              onClick={() => navigate("/my-information")}
+              onClick={() => navigate(`/my-information`)}
             >
               <div className="bell">
                 <div className="bi">
-                  {" "}
                   <FiUser className="be" />{" "}
                 </div>
                 <h3 className="mt-2">Мои данные </h3>
