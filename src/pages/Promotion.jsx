@@ -19,7 +19,6 @@ const Promotion = () => {
           />
         </div>
       </div>
-      <GetShot />
       <SpecialOffers />
     </div>
   );

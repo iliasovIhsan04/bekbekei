@@ -353,6 +353,10 @@ p {
 .get_block_all_block {
   overflow-y: hidden;
   display: flex;
+}
+.new_block_all {
+  overflow-y: hidden;
+  display: flex;
   margin: 0 0 50px 0;
 }
 .special_box_blok {
@@ -1296,4 +1300,42 @@ input#file-upload-button {
   font-size: 16px;
   font-weight: 400;
   color: #000;
+}
+
+/* main.css */
+.react-pull-to-refresh {
+  /* Стили для области обновления */
+  /* Например: */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+/* Стили для обновляемого содержимого */
+.react-pull-to-refresh .content {
+  /* Например: */
+  font-size: 16px;
+  color: #333;
+}
+/* main.css */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.react-pull-to-refresh .loader {
+  /* Стили для элемента загрузчика, который отображается во время обновления */
+  /* Например: */
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite; /* Применяем анимацию */
+  margin: 20px auto;
 }

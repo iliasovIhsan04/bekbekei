@@ -12,16 +12,17 @@ import SwipeableBottomSheet from "react-swipeable-bottom-sheet";
 import classNames from "classnames";
 import logo from "../img/bekbekei-logotip.png";
 import ReactPullToRefresh from "react-pull-to-refresh";
+import NewPromotions from "../pages/NewPromotions";
 
 const Main = ({ user }) => {
   const navigate = useNavigate();
   const token = localStorage.getItem("token")
     ? localStorage.getItem("token")
     : false;
+  console.log(user);
 
   const handleRefresh = () => {
     window.location.reload(user);
-    // user.reload(token);
   };
 
   return (
@@ -65,6 +66,7 @@ const Main = ({ user }) => {
             )}
           </div>
           <GetShot token={token} user={user} />
+          <NewPromotions />
           {/* <MyCoupon />   */}
         </div>
         {/* </SwipeableBottomSheet> */}

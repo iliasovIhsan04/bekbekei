@@ -43,7 +43,7 @@ const App = () => {
   const [version, setVersion] = useState([]);
   const [upDate, setUpDate] = useState(false);
   const [local, setLocal] = useState(localStorage.getItem("tokens"));
-
+  console.log(local);
   const headers = {
     Authorization: `Token ${local}`,
   };

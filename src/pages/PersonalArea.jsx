@@ -71,7 +71,7 @@ const PersonalArea = () => {
             >
               <div className="bell">
                 <div className="bi">
-                  <FiUser className="be" />{" "}
+                  <FiUser className="be" />
                 </div>
                 <h3 className="mt-2">Мои данные </h3>
               </div>
