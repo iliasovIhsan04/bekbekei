@@ -26,7 +26,7 @@ const NewPromotions = () => {
             <p className="text">Акция</p>
             <h4
               className="title_add"
-              onClick={() => navigate("/get-shot-details")}
+              onClick={() => navigate(`/get-shot-details/`)}
             >
               все
             </h4>

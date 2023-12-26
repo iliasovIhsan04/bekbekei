@@ -38,7 +38,7 @@ const Notifications = () => {
         ""
       ) : (
         <>
-          {notify.length > 0 ? (
+          {notify ? (
             <div className="notificatios_block">
               {notify.map((el) => (
                 <div

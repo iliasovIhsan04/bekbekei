@@ -107,6 +107,10 @@ const App = () => {
       });
   }, []);
 
+  useEffect(() => {
+    FuncAlert("response.data.message", "success");
+  }, []);
+
   const versionConst = "1.0.3";
   useEffect(() => {
     if (
@@ -120,6 +124,14 @@ const App = () => {
   }, [version]);
   return (
     <>
+      {openAlert.open && (
+        <AlertData
+          state={openAlert}
+          setState={setOpenAlert}
+          propsData={openAlert.props}
+          text={openAlert.text}
+        />
+      )}
       {upDate && (
         <div className="verson">
           <div className="verson_block">
@@ -149,14 +161,6 @@ const App = () => {
       )}
       {token ? (
         <div>
-          {openAlert.open && (
-            <AlertData
-              state={openAlert}
-              setState={setOpenAlert}
-              propsData={openAlert.props}
-              text={openAlert.text}
-            />
-          )}
           <div>
             <Routes>
               <Route path="/" element={<Main user={user} />} />
@@ -173,10 +177,6 @@ const App = () => {
               />
               <Route path="/to-help-page" element={<ToHelpPage />} />
               <Route path="/message-page" element={<MessagePage />} />
-              <Route
-                path="/settings"
-                element={<Settings Alert={FuncAlert} />}
-              />
               <Route path="/new-address" element={<NewAddress />} />
               <Route path="/dashboard" element={<PersonalArea />} />
               <Route path="shop-all/*" element={<Project />} />
@@ -191,6 +191,10 @@ const App = () => {
               <Route
                 path="/my-information"
                 element={<MyInformation Alert={FuncAlert} />}
+              />
+              <Route
+                path="/settings"
+                element={<Settings Alert={FuncAlert} />}
               />
               {/*<Route path="/my-coupon-details" element={<MyCouponDetails/>}/>*/}
               {/*<Route*/}

@@ -93,7 +93,7 @@ const PersonalArea = () => {
             {/*        <IoIosArrowForward className="be"/>*/}
             {/*    </div>*/}
             {/*</div>*/}
-            <div className="area_all" onClick={() => navigate(`/settings`)}>
+            <div onClick={() => navigate(`/settings`)} className="area_all">
               <div className="bell">
                 <div className="bi">
                   <IoSettingsOutline className="be" />

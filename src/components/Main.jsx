@@ -62,52 +62,57 @@ const Main = () => {
   return (
     <div className="main-block">
       <Header user={user} />
-        <ReactPullToRefresh onRefresh={handleRefresh}>
-          <div style={{display: "flex", justifyContent: "center"}}>
+      <ReactPullToRefresh onRefresh={handleRefresh}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <LoadingPullTo />
+        </div>
+        <div className="margin_top">
+          <div className="container">
+            <Storis token={token} />
           </div>
-          <div className="margin_top">
-            <div className="container">
-              <Storis token={token} />
-            </div>
-          </div>
-          {/* <SwipeableBottomSheet overflowHeight={574}> */}
-          <div className="swiper">
-            <div className="container">
-              {token ? (
-                <div style={{ padding: "20px 0 0 0" }}>
-                  <div className="margin_top_all">
-                    <div className="margin_top_log">
-                      <DiVisualstudio className="dio" />
-                      <img src={logo} alt="" className="dio" />
-                    </div>
-                  </div>
-                  <div
-                    className="bonus_block_all"
-                    onClick={() => navigate("/qr-cod")}
-                  >
-                    <div>
-                      <h4 className="title_h">Бонусная карта</h4>
-                      <h1 className="title_ha">
-                        {data.user.bonus}
-                        <span>бонусов</span>
-                      </h1>
-                    </div>
-                    <div className="bonus_img">
-                      <img src={data.user.qrimg} alt="" />
-                    </div>
+        </div>
+        {/* <SwipeableBottomSheet overflowHeight={574}> */}
+        <div className="swiper">
+          <div className="container">
+            {token ? (
+              <div style={{ padding: "20px 0 0 0" }}>
+                <div className="margin_top_all">
+                  <div className="margin_top_log">
+                    <DiVisualstudio className="dio" />
+                    <img src={logo} alt="" className="dio" />
                   </div>
                 </div>
-              ) : (
-                ""
-              )}
-            </div>
-            <GetShot token={token} user={user} />
-            <NewPromotions />
-            {/* <MyCoupon />   */}
+                <div
+                  className="bonus_block_all"
+                  onClick={() => navigate("/qr-cod")}
+                >
+                  <div>
+                    <h4 className="title_h">Бонусная карта</h4>
+                    <h1 className="title_ha">
+                      {data.user.bonus}
+                      <span>бонусов</span>
+                    </h1>
+                  </div>
+                  <div className="bonus_img">
+                    <img src={data.user.qrimg} alt="" />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
-          {/* </SwipeableBottomSheet> */}
-        </ReactPullToRefresh>
+          <GetShot token={token} user={user} />
+          <NewPromotions />
+          {/* <MyCoupon />   */}
+        </div>
+        {/* </SwipeableBottomSheet> */}
+      </ReactPullToRefresh>
     </div>
   );
 };

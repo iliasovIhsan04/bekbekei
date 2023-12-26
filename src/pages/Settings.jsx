@@ -12,6 +12,7 @@ import { auth } from "../Redux/reduser/auth";
 
 const Settings = ({ Alert }) => {
   const [openModalSetting, setOpenModalSetting] = useState(false);
+  const [delete1, setDelete1] = useState(false);
   const isOpenModal1 = () => {
     setOpenModalSetting(true);
   };
@@ -83,6 +84,23 @@ const Settings = ({ Alert }) => {
       setInputChanged(false);
     } catch (error) {
       console.error("Error:", error);
+    }
+  };
+
+  const deleteAccount = async () => {
+    try {
+      const response = await axios.get(url + "/auth/delete-account", {
+        headers,
+      });
+      if (response.data.response === true) {
+        Alert(response.data.message, "success");
+        localStorage.removeItem("token");
+        localStorage.removeItem("tokens");
+        localStorage.removeItem("token_block");
+        navigate("/personal/to-come-in");
+      }
+    } catch (error) {
+      console.log("Error:", error);
     }
   };
 
@@ -260,14 +278,7 @@ const Settings = ({ Alert }) => {
                 <div className="order">
                   <div className="acaunt_block_modal">
                     <h3>Вы действительно хотите удалить?</h3>
-                    <button
-                      onClick={() =>
-                        localStorage.removeItem("token") ||
-                        navigate("/to-come-in")
-                      }
-                    >
-                      Да
-                    </button>
+                    <button onClick={deleteAccount}>Да</button>
                     <h4>Нет</h4>
                   </div>
                 </div>

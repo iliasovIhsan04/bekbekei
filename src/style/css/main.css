@@ -1244,7 +1244,7 @@ input#file-upload-button {
   width: 100%;
   min-height: 90px;
   background-color: #ff640db8;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 2px solid rgba(17, 23, 29, 0.142);
   display: flex;
   align-items: center;
 }
@@ -1275,7 +1275,7 @@ input#file-upload-button {
 }
 .magap_date {
   font-size: 14px;
-  color: rgb(0 0 0 / 52%);
+  color: rgba(17, 23, 29, 0.525);
   margin-left: auto;
   display: flex;
   justify-content: end;
