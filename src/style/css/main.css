@@ -325,6 +325,7 @@ p {
 
 .special_offers {
   margin-bottom: 100px;
+  margin-top: 80px;
 }
 
 .title_top {
@@ -1242,16 +1243,17 @@ input#file-upload-button {
 }
 .notifications_box {
   width: 100%;
-  min-height: 90px;
+  min-height: 85px;
   background-color: #ff640db8;
   border-bottom: 2px solid rgba(17, 23, 29, 0.142);
   display: flex;
   align-items: center;
+  padding: 10px 0px 10px;
 }
 .notification_index {
   width: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 .notify {
   width: 40px;
@@ -1269,9 +1271,12 @@ input#file-upload-button {
   font-size: 16px;
   font-weight: 400;
   color: black;
-  margin-left: 20px;
+  margin-left: 15px;
   width: 180px;
   min-height: 10px;
+}
+.magap_box {
+  margin-left: auto;
 }
 .magap_date {
   font-size: 14px;

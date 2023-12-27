@@ -51,7 +51,9 @@ const Notifications = () => {
                       <IoIosMegaphone size={25} className="megap_icons" />
                     </div>
                     <h4 className="megap_title">{el.title}</h4>
-                    <p className="magap_date">{el.date}</p>
+                    <div className="magap_box">
+                      <p className="magap_date">{el.date}</p>
+                    </div>
                   </div>
                 </div>
               ))}

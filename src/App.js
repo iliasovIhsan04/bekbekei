@@ -107,10 +107,6 @@ const App = () => {
       });
   }, []);
 
-  useEffect(() => {
-    FuncAlert("response.data.message", "success");
-  }, []);
-
   const versionConst = "1.0.3";
   useEffect(() => {
     if (

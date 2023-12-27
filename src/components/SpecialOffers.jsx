@@ -17,7 +17,7 @@ const SpecialOffers = () => {
   return (
     <div className="special_offers">
       <div className="container">
-        <div className="title title_top">
+        {/* <div className="title title_top">
           <p>Атайын сунуштар </p>
           <h4
             className="title_add"
@@ -26,7 +26,7 @@ const SpecialOffers = () => {
             Бардыгы
             <MdOutlineKeyboardArrowRight size={20} />
           </h4>
-        </div>
+        </div> */}
         <div className="special_block_all">
           {data.map((el, id) => (
             <div
